@@ -132,6 +132,9 @@ Header ul{
         }
     }
 }
+.btn-div{
+    width: 85%;
+}
 
 section{
     margin-top: 50px;
@@ -210,14 +213,44 @@ section{
 .aboutus{
     margin-top: 150px;
     & h1{
+        padding-left: 50px;
         font-size: 40px;
-        font-weight: 600;
+        font-weight: bold;
         color: var(--darkblue);
     }
-    & div{
-        font-size: 20px;
-        font-weight: 400;
-        color: var(--gray);
+    & h2{
+        margin: 10px 0px;
+        font-size: 18px;
+        font-weight: bold;
+        color: var(--darkorange);
+    }   
+    & p{
+        margin: 5px 0px;
+        text-align: justify;
+    }
+    & .story img{
+        width: 30vw;
+        height: 30vh;
+        box-shadow: #000 0px 0px 10px;
+        border-radius: 10px;
+    }
+    & .story-2 img{
+        width: 30vw;
+        height: 40vh;
+        box-shadow: #000 0px 0px 10px;
+        border-radius: 10px;
+    }
+    & h3{
+        margin: 10px 0px;
+        font-size: 16px;
+        color: blue;
+        font-weight: bold;
+    }
+    & span{
+        font-weight: bold;
+    }
+    & .reverse{
+        margin-top: 50px;
     }
 }
 
@@ -303,4 +336,7 @@ Footer{
     margin-top: 50px;
     background-color: white;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.aboutus-1{
+    width: 40vw;
 }
