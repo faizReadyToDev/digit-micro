@@ -5,6 +5,8 @@
     --gradient-color-3: linear-gradient(to right, rgb(255, 254, 254) 0%, white, rgb(229, 221, 221),rgb(219, 209, 209));
     --gray: rgb(172, 165, 165);
     --border: rgb(195, 194, 194);
+    --darkblue: rgb(0, 0, 122);
+    --darkorange: #ad3603;
 }
 *{
     margin: 0;
@@ -61,7 +63,6 @@ a {
     gap: 10px;
     align-items: center;
     width: 40vw;
-    font-size: 18px;
     cursor: pointer;
     border: 1px solid rgb(195, 194, 194);
     padding: 10px 0px;
@@ -80,22 +81,26 @@ ul{
     padding: 10px 20px;
     border-radius: 30px;
     border: none;
-    color: #000;
-    background-color: white;
+    color: #fff;
+    background-color: var(--darkblue);
     border: 1px solid rgb(195, 194, 194);
     font-size: 18px;
     cursor: pointer;
     &:hover{
 
         transition: all 0.5s ease;
-        background-color: black;
-        color: white;
+        background-image: var(--gradient-color-3);
+        color: black;
+        & span{
+            transition: all 0.5s ease;
+            margin: 0px 3px;
+        }
     }
 }
 .hero-btn{
     width: 200px;
     padding: 10px 20px;
-    background-color: black;
+    background-color: var(--darkblue);
     color: white;
     border-radius: 30px;
     color: whitesmoke;
@@ -127,7 +132,7 @@ section{
     & h1{
         font-size: 40px;
         font-weight: 600;
-        color: blue;
+        color: var(--darkblue);
     }
     & p{
         font-size: 20px;
@@ -135,7 +140,7 @@ section{
         color: var(--gray);
     }
     & .tag{
-        color: orangered;
+        color: var(--darkorange);
     }
 }
 .hero-ani{
@@ -153,7 +158,6 @@ section{
         font-size: 16px;
         font-weight: 400;
         text-align: center;
-        background-color: black;
         color: white;
     }
     
@@ -161,7 +165,7 @@ section{
 .ani-h1{
     display: flex;
     height: 5vw;
-    background-color: black;
+    background-color: var(--darkblue);
     align-items: center;
     justify-content: center;
 }
