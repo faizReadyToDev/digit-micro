@@ -41,9 +41,15 @@ transform: scaleX(1);
 transform-origin: left;
 }
 
-
+Header{
+    position: fixed;
+    top: 0px;
+    background-color: #fff;
+    z-index: 1;
+   left: 85px;
+}
 .logo{
-    width: 12vw;
+    width: 15vw;
     padding-top: 10px;
 }
 .header{
@@ -64,11 +70,18 @@ a {
     align-items: center;
     width: 40vw;
     cursor: pointer;
-    border: 1px solid rgb(195, 194, 194);
+    border: 1px solid var(--darkblue);
     padding: 10px 0px;
     border-radius: 30px;
+    font-weight: bold;
+    & a{
+        &:hover{
+            transition: all 0.5s ease;
+            color: var(--darkorange);
+        }
+    }
 }
-ul{
+Header ul{
   list-style-type: none;  
 }
 
@@ -82,15 +95,15 @@ ul{
     border-radius: 30px;
     border: none;
     color: #fff;
-    background-color: var(--darkblue);
+    background-color: var(--darkorange);
     border: 1px solid rgb(195, 194, 194);
     font-size: 18px;
     cursor: pointer;
+    font-weight: bold;
     &:hover{
 
         transition: all 0.5s ease;
-        background-image: var(--gradient-color-3);
-        color: black;
+        background-color: blue;
         & span{
             transition: all 0.5s ease;
             margin: 0px 3px;
@@ -100,7 +113,7 @@ ul{
 .hero-btn{
     width: 200px;
     padding: 10px 20px;
-    background-color: var(--darkblue);
+    background-color: var(--darkorange);
     color: white;
     border-radius: 30px;
     color: whitesmoke;
@@ -108,11 +121,11 @@ ul{
     border: 1px solid rgb(195, 194, 194);
     font-size: 18px;
     cursor: pointer;
+    font-weight: bold;
     &:hover{
 
         transition: all 0.5s ease;
-        background-image: var(--gradient-color-3);
-        color: black;
+        background-color: blue;
         & .arrow{
             transition: all 0.5s ease;
             padding: 0px 10px;
@@ -121,7 +134,11 @@ ul{
 }
 
 section{
-    margin-top: 80px;
+    margin-top: 50px;
+}
+
+.hero{
+    margin-top: 140px;    
 }
 
 .hero-left{
@@ -130,17 +147,20 @@ section{
     flex-direction: column;
     gap: 20px;
     & h1{
-        font-size: 40px;
+        text-align: start;
+        font-size: 36px;
         font-weight: 600;
         color: var(--darkblue);
     }
     & p{
-        font-size: 20px;
+        text-align: start;
+        font-size: 16px;
         font-weight: 400;
-        color: var(--gray);
     }
     & .tag{
+        text-align: start;
         color: var(--darkorange);
+        font-size: 18px;
     }
 }
 .hero-ani{
@@ -151,8 +171,8 @@ section{
     gap: 10px;
     overflow: hidden;
     & img{
-        width: 20vw;
-        height: 40vh;
+        width: 15vw;
+        height: 35vh;
     }
     & h1{
         font-size: 16px;
@@ -180,11 +200,107 @@ section{
         transform: translateX(0);
     }
     100%{
-        transform: translateX(-300%);
+        transform: translateX(-250%);
     }
 }
 .ani{
     animation: slider 8s linear infinite;
 }
 
+.aboutus{
+    margin-top: 150px;
+    & h1{
+        font-size: 40px;
+        font-weight: 600;
+        color: var(--darkblue);
+    }
+    & div{
+        font-size: 20px;
+        font-weight: 400;
+        color: var(--gray);
+    }
+}
 
+.sec-2{
+    border-radius: 10px;
+    width: 40vw;
+    height: 60vh;
+    & h1{
+        font-size: 36px;
+        font-weight: 600;
+        color: var(--darkblue);
+        margin-bottom: 2%;
+       
+    }
+    & h2{
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--darkblue);
+    }
+    & p{
+        margin: 10px 0px;
+    }
+}
+.tree{
+    width: 40vw;
+    height: 60vh;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.crown{
+    width: 42vw;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    & img{
+        width: 10vw;
+    }
+}
+
+.footer{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    align-items: center;    
+    justify-items: center;
+
+    & h2{
+        font-weight: bold;
+        color: var(--darkblue);
+    }
+    & p{
+        margin-top: 10px;
+    }
+   
+}
+
+.copyright{
+    text-align: center;
+    border-top: 1px solid var(--border);
+    color: #000;
+    padding-top: 20px;
+}
+
+.social{
+    width: 38px;
+    height: 38px;
+}
+.icons{
+    gap: 5px;
+    align-self: center;
+    cursor: pointer;
+    justify-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    margin-top: 30px;
+}
+
+Footer{
+    border-radius: 10px;
+    padding-top: 40px;
+    margin-top: 50px;
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}

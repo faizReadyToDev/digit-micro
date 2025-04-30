@@ -29,3 +29,17 @@
     width: 85vw;
     margin: auto;
 }
+.display-80{
+    width: 80vw;
+    margin: auto;
+}
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.active {
+    color: blue; /* or any color */
+    font-weight: bold;
+}
