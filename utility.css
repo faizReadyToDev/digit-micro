@@ -43,3 +43,7 @@
     color: blue; /* or any color */
     font-weight: bold;
 }
+
+.display-40{
+    width: 40vw;
+}

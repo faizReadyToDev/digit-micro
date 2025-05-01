@@ -402,48 +402,99 @@ section{
 }
 
 
+@keyframes about-img-lower {
+    0%{
+        rotate: -10deg;
+        
+    }
+    100%{
+        transform: translateX(-50%);
+        transform: translateY(-50%);
+    }
+}
+@keyframes about-img-uppar {
+    0%{
+        rotate: -10deg;
+        
+    }
+    100%{
+        transform: translateX(50%);
+        transform: translateY(50%);
+    }
+}
+@keyframes about-heading {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+@keyframes about-slider {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-105%);
+    }
+}
 
 .aboutus{
     margin-top: 150px;
+    overflow: hidden;
+
+    .aboutus-img{
+        width: 40vw;
+        gap: 50px;
+    }
+
+    .aboutus-content{
+        width: 40vw;
+    }
+    .aboutus-p{
+        padding-bottom: 40px;
+        border-bottom: rgb(239, 234, 234) 1px solid;
+    }
+    
     & h1{
-        padding-left: 50px;
+        margin-top: 50px;
         font-size: 40px;
         font-weight: bold;
         color: var(--darkblue);
+        /* text-align: center; */
     }
-    & h2{
-        margin: 10px 0px;
-        font-size: 18px;
-        font-weight: bold;
-        color: var(--darkorange);
-    }   
+
+    .aboutus-h1{
+        margin-bottom: 20px;
+        margin-top: 10px;
+        animation: about-heading 500ms linear;
+        width: 40vw;
+    }
+
     & p{
-        margin: 5px 0px;
-        text-align: justify;
-    }
-    & .story img{
-        width: 30vw;
-        height: 30vh;
-        box-shadow: #000 0px 0px 10px;
-        border-radius: 10px;
-    }
-    & .story-2 img{
-        width: 30vw;
-        height: 40vh;
-        box-shadow: #000 0px 0px 10px;
-        border-radius: 10px;
-    }
-    & h3{
-        margin: 10px 0px;
+        padding-left: 50px;
         font-size: 16px;
-        color: blue;
-        font-weight: bold;
+        text-align: justify;
+        color: var(--darkorange);
+        margin: 20px 0px;
     }
-    & span{
-        font-weight: bold;
+    button{
+        margin-top: 40px;
+        border-radius: 10px;
     }
-    & .reverse{
-        margin-top: 50px;
+    .aboutus-img img{
+        width: 15vw;
+        height: 35vh;
+        border-radius: 10px;
+        
+    }
+    .lower-img{
+        margin-top: 100px;
+        animation: 2s about-img-lower linear infinite;
+    }
+    .uppar-img{
+        animation: 2s about-img-uppar linear infinite;
+        margin-bottom: 100px;
     }
 }
 .sec-2-div{
@@ -580,6 +631,4 @@ Footer{
     background-color: white;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
-.aboutus-1{
-    width: 40vw;
-}
+
